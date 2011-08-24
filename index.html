@@ -15,12 +15,19 @@
       font-size: 12px;
     }
 
-    header {
-      display: block;
+    html, body, table, tr, td {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #header td {
+      width: 100%;
       text-align: center;
     }
 
     h1 {
+      display: block;
       font-size: 13.33em;
       line-height: 1em;
       margin: 0;
@@ -35,14 +42,17 @@
       text-shadow: rgba(0,0,0,.5) 1px 1px 4px;
     }
 
-    #valadequater {
-      position: absolute; bottom: 10px; right: 10px;
+    #valadequater div {
+      float: right;
       font-family: Arial, sans-serif; color: #DDD;
       padding: 4px;
+      margin: 12px;
       background-color: green;
       border: 2px solid #444;
       font-size: 10pt;
+      display: inline;
     }
+
     #valadequater a {
       font-size: 8pt; color: #DDD;
     }
@@ -54,16 +64,28 @@
 
 <body>
 
-  <header role="banner">
-    <img src="epiclogo.png" alt="Adequately">
-  </header>
+  <table>
+    <tr id="header" role="banner">
+      <td>
+        <img src="epiclogo.png" alt="Adequately">
+      </td>
+    </tr>
 
-  <section role="main">
-  </section>
+    <tr role="main">
+      <td></td>
+    </tr>
 
-  <footer role="contentinfo">
-  </footer>
-  <!--! the valadequater - 'you CAN be sure enough' -->
-  <div id="valadequater">☑ certified Adequate as of: &nbsp;&nbsp;<b>LATELY</b>&nbsp;&nbsp; <a href="#" onclick="alert('still adequate')">check again</a></div>
+    <tr id="footer" role="contentinfo">
+      <td></td>
+    </tr>
+
+    <tr>
+      <!--! the valadequater - 'you CAN be sure enough' -->
+      <td id="valadequater">
+        <div>☑ certified Adequate as of: &nbsp;&nbsp;<b>LATELY</b>&nbsp;&nbsp; <a href="#" onclick="alert('still adequate')">check again</a></div>
+      </td>
+    </tr>
+  </table>
+
 </body>
 </html>
