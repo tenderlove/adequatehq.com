@@ -10,82 +10,51 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <style>
-    html {
-      font-family: arial, sans-serif;
-      font-size: 12px;
-    }
+  html, body {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
 
-    html, body, table, tr, td {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
+  header {
+    width: 100%;
+    text-align: center;
+    background: url(epiclogo.png) no-repeat center center;
+    height: 430px;
+  }
 
-    #header td {
-      width: 100%;
-      text-align: center;
-    }
+  h1, h2 { text-indent: -999em; }
 
-    h1 {
-      display: block;
-      font-size: 13.33em;
-      line-height: 1em;
-      margin: 0;
-      text-shadow: rgba(0,0,0,.75) 2px 2px 4px;
-    }
+  #valadequater {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-family: arial, sans-serif; color: #ddd;
+    padding: 4px;
+    background-color: green;
+    border-top: 5px solid yellow;
+    font-size: 10pt;
+    width: 100%;
+  }
 
-    h2 {
-      font-size:   2.25em;
-      font-weight: normal;
-      font-style:  italic;
-      color: gray;
-      text-shadow: rgba(0,0,0,.5) 1px 1px 4px;
-    }
-
-    #valadequater div {
-      float: right;
-      font-family: Arial, sans-serif; color: #DDD;
-      padding: 4px;
-      margin: 12px;
-      background-color: green;
-      border: 2px solid #444;
-      font-size: 10pt;
-      display: inline;
-    }
-
-    #valadequater a {
-      font-size: 8pt; color: #DDD;
-    }
-    #valadequater b {
-      font-family: "Courier New", monospace; color: #FFF; font-size: 14pt;
-    }
+  #valadequater a { font-size: 8pt; color: #ddd; }
+  #valadequater b { font-family: "courier new", monospace; color: #fff; font-size: 14pt; }
   </style>
 </head>
 
 <body>
 
-  <table>
-    <tr id="header" role="banner">
-      <td>
-        <img src="epiclogo.png" alt="Adequately">
-      </td>
-    </tr>
+  <header role="banner">
+    <h1>☑ Adequate</h1>
+    <h2>Everything. Adequately.</h2>
+  </tr>
 
-    <tr role="main">
-      <td></td>
-    </tr>
-
-    <tr id="footer" role="contentinfo">
-      <td></td>
-    </tr>
-
-    <tr>
-      <!--! the valadequater - 'you CAN be sure enough' -->
-      <td id="valadequater">
-        <div>☑ certified Adequate as of: &nbsp;&nbsp;<b>LATELY</b>&nbsp;&nbsp; <a href="#" onclick="alert('still adequate')">check again</a></div>
-      </td>
-    </tr>
-  </table>
-
+  <footer role="contentinfo">
+    <!--! the valadequater - 'you CAN be sure enough' -->
+    <div id="valadequater">☑ certified Adequate as of: &nbsp;&nbsp;<b>LATELY</b>&nbsp;&nbsp; <a href="#" onclick="alert('still adequate')">check again</a></div>
+  </footer>
 </body>
 </html>
